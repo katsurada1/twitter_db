@@ -10,6 +10,10 @@ INSERT INTO replies(id, tweet_id, user_id, text)
     VALUES (0, 0, 1, 'reply_0');
 INSERT INTO likes(id, tweet_id, user_id)
     VALUES (0, 0, 1);
+INSERT INTO hashtags(id, tweet_id, user_id)
+    VALUES 
+        (0, 0, 0),
+        (1, 1, 1);
 INSERT INTO retweets(id, tweet_id, user_id)
     VALUES (0, 0, 1);
 INSERT INTO followers(id, user_id)
