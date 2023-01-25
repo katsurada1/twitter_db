@@ -27,13 +27,8 @@ CREATE TABLE IF NOT EXISTS likes (
 
 CREATE TABLE IF NOT EXISTS hashtags (
     id INT PRIMARY KEY,
-    text VARCHAR(255) NOT NULL,
-    user_id INT NOT NULL
-);
-
-CREATE TABLE IF NOT EXISTS tweets_hashtags (
     tweet_id INT NOT NULL,
-    hashtag_id INT NOT NULL
+    text VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS retweets (
@@ -43,6 +38,16 @@ CREATE TABLE IF NOT EXISTS retweets (
 );
 
 CREATE TABLE IF NOT EXISTS followers (
+    id INT PRIMARY KEY,
+    user_id INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS blocks (
+    id INT PRIMARY KEY,
+    user_id INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS mutes (
     id INT PRIMARY KEY,
     user_id INT NOT NULL
 );
