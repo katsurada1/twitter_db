@@ -18,10 +18,18 @@ INSERT INTO hashtags(id, tweet_id, text)
         (1, 0, 'fghij');
 INSERT INTO retweets(id, tweet_id, user_id)
     VALUES (0, 0, 1);
+
+-- 1 follows 0,2
 INSERT INTO follows(id, follower_id, followee_id)
-    VALUES (0, 1, 0);
+    VALUES 
+        (0, 1, 0),
+        (1, 1, 2);
+
+-- 2 blocks 0
 INSERT INTO blocks(id, blocker_id, blockee_id)
     VALUES (0, 2, 0);
+
+-- 2 mutes 0
 INSERT INTO mutes(id, muter_id, mutee_id)
     VALUES (0, 2, 0);
 INSERT INTO timeline(id, user_id, tweet_id)
