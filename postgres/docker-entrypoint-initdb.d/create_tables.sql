@@ -37,17 +37,20 @@ CREATE TABLE IF NOT EXISTS retweets (
     user_id INT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS followers (
+CREATE TABLE IF NOT EXISTS follows (
     id INT PRIMARY KEY,
-    user_id INT NOT NULL
+    follower_id INT NOT NULL,
+    followee_id INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS blocks (
     id INT PRIMARY KEY,
-    user_id INT NOT NULL
+    blocker_id INT NOT NULL,
+    blockee_id INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS mutes (
     id INT PRIMARY KEY,
-    user_id INT NOT NULL
+    muter_id INT NOT NULL,
+    mutee_id INT NOT NULL
 );
