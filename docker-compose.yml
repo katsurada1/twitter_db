@@ -2,7 +2,7 @@ version: '3'
 
 services:
   postgres:
-    build: ./postgresd 
+    build: ./postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -11,7 +11,7 @@ services:
         max-size: 10m
         max-file: "3"
     ports:
-      - 5430:5430
+      - 5431:5431
     restart: always
     volumes:
       - ./postgres/var/lib/postgresql/data:/var/lib/postgresql/data
