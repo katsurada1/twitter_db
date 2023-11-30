@@ -54,3 +54,9 @@ CREATE TABLE IF NOT EXISTS mutes (
     muter_id INT NOT NULL,
     mutee_id INT NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS timeline (
+    id INT PRIMARY KEY,
+    user_id INT NOT NULL,
+    tweet_id INT NOT NULL
+);
